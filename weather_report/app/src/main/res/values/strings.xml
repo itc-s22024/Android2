@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Weather_Report</string>
+    <string name="bt_select">都市選択</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_title">お天気詳細</string>
+</resources>
