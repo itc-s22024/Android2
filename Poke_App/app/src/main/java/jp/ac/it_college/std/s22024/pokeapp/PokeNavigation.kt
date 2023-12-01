@@ -6,8 +6,8 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.contentColorFor
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -18,7 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.intPreferencesKey
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -27,26 +28,33 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import jp.ac.it_college.std.s22024.pokeapp.database.PokeRoomDatabase
+import jp.ac.it_college.std.s22024.pokeapp.download.DownloadScene
+import jp.ac.it_college.std.s22024.pokeapp.download.pokeDataDownload
 import jp.ac.it_college.std.s22024.pokeapp.generation.SelectGenerationScene
 import jp.ac.it_college.std.s22024.pokeapp.model.PokeQuiz
 import jp.ac.it_college.std.s22024.pokeapp.quiz.QuizScene
 import jp.ac.it_college.std.s22024.pokeapp.result.ResultScene
 import jp.ac.it_college.std.s22024.pokeapp.title.TitleScene
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
-import java.time.LocalDate
-import java.util.Calendar
-import java.util.concurrent.Flow
-import java.util.prefs.Preferences
+import java.time.LocalDateTime
+import java.time.temporal.ChronoUnit
+
 
 // Preferences DataStore を使えるようにする
 val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "pokeApi")
+
 object Destinations {
     const val TITLE = "title"
     const val GENERATION = "generation_select"
     const val QUIZ = "quiz/{order}"
     const val RESULT = "result"
+    const val DOWNLOAD = "data_download"
 }
 
 @OptIn(ExperimentalMaterial3Api::class)     // 比較的新しい実験的な機能を使うときに指定するらしい。
@@ -62,7 +70,7 @@ fun PokeNavigation(
     var score by remember { mutableIntStateOf(0) }
     // context
     val context = LocalContext.current
-
+    // コルーチンスコープ
     val scope = rememberCoroutineScope()
 
     // Scaffold を使うと、NavHost 以外の部分の構築を手っ取り早くできる。
@@ -88,9 +96,22 @@ fun PokeNavigation(
                 titleText = ""
                 TitleScene(
                     onTitleClick = {
-                        navController.navigate(Destinations.GENERATION)
+                        if (isReadyData(context)) {
+                            navController.navigate(Destinations.GENERATION)
+                        } else {
+                            navController.navigate(Destinations.DOWNLOAD)
+                        }
                     }
                 )
+            }
+
+            composable(Destinations.DOWNLOAD) {
+                DownloadScene()
+                LaunchedEffect(key1 = "download") {
+                    pokeDataDownload(context = context, scope = scope) {
+                        navController.navigate(Destinations.GENERATION)
+                    }
+                }
             }
 
             composable(Destinations.GENERATION) {
@@ -105,7 +126,7 @@ fun PokeNavigation(
                         quizData = generateQuizData(context, gen)
                         navController.navigate("quiz/0") {
                             popUpTo(Destinations.GENERATION)
-                    }
+                        }
                     }
                 })
             }
@@ -162,13 +183,16 @@ fun PokeNavigation(
     }
 }
 
-fun isReadyData() {
+fun isReadyData(context: Context): Boolean {
     // 直近のデータ取得日を DataStore から取得する
-    val LAST_UPDATED_AT = intPreferencesKey("Last_updated_at")
-    val lastUpdatedAtFlow: Flow<Calendar> = context.dataStore.data
+    val LAST_UPDATED_AT = stringPreferencesKey("last_updated_at")
+    val lastUpdatedAtStringFlow: Flow<String> = context.dataStore.data
         .map {
-            it[LAST_UPDATED_AT]
+            it[LAST_UPDATED_AT] ?: LocalDateTime.MIN.toString()
         }
+    // LocalDateTime に変換
+    val lastUpdatedAt = runBlocking { LocalDateTime.parse(lastUpdatedAtStringFlow.first()) }
+    return ChronoUnit.MONTHS.between(lastUpdatedAt, LocalDateTime.now()) == 0L
 }
 
 suspend fun generateQuizData(context: Context, generation: Int): List<PokeQuiz> =
@@ -187,11 +211,11 @@ suspend fun generateQuizData(context: Context, generation: Int): List<PokeQuiz> 
             val choices = mutableListOf(target.name)
             // 誤答の選択肢を3つ追加する
             choices.addAll(
-                currentList.filter { it.id != target.id }.shuffled().subList(0, 3).map { it.name }
+                pokeData.filter { it.id != target.id }.shuffled().subList(0, 3).map { it.name }
             )
             PokeQuiz(
                 target.mainTextureUrl,
-                choices.shuffled(), // ここで選択肢をシャッフルしている
+                choices.shuffled(),     // ここで選択肢をシャッフルしている
                 target.name
             )
         }
