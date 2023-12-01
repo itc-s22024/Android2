@@ -25,6 +25,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import jp.ac.it_college.std.s22024.weather_report_compose.cityselect.CityName
 import jp.ac.it_college.std.s22024.weather_report_compose.title.TitleScene
+import jp.ac.it_college.std.s22024.weather_report_compose.weather_report.WeatherReport
 
 val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "WeatherReportCompose")
 
@@ -61,11 +62,15 @@ fun weatherNavigation (
                 )
             }
             composable(Destinations.CITYSELECT) {
-                CityName()
+                CityName(
+                    onCityselect = {
+                        navController.navigate(Destinations.WEATHERREPORT)
+                    }
+                )
             }
-//            composable(Destinations.CITYSELECT) {
-//
-//            }
+            composable(Destinations.WEATHERREPORT) {
+                WeatherReport()
+            }
         }
     }
 }

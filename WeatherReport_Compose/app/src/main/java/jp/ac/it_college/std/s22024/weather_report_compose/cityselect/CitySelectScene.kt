@@ -19,7 +19,7 @@ import jp.ac.it_college.std.s22024.weather_report_compose.citylist
 import jp.ac.it_college.std.s22024.weather_report_compose.ui.theme.WeatherReportComposeTheme
 
 @Composable
-fun CityName(modifier: Modifier = Modifier, onClick: (String) -> Unit = {}) {
+fun CityName(modifier: Modifier = Modifier, onCityselect: (String) -> Unit = {}) {
     Surface(modifier) {
         Column(
             modifier = Modifier
@@ -28,7 +28,7 @@ fun CityName(modifier: Modifier = Modifier, onClick: (String) -> Unit = {}) {
         ) {
             citylist.forEach{ CityData ->
                 Button(
-                    onClick = { onClick(CityData.name) },
+                    onClick = { onCityselect(CityData.name) },
                     modifier = Modifier
                         .padding(4.dp)
                 ) {
