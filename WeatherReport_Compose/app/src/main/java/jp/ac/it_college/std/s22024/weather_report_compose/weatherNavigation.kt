@@ -23,9 +23,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import jp.ac.it_college.std.s22024.weather_report_compose.api.CityGroup
 import jp.ac.it_college.std.s22024.weather_report_compose.cityselect.CityName
 import jp.ac.it_college.std.s22024.weather_report_compose.title.TitleScene
 import jp.ac.it_college.std.s22024.weather_report_compose.weather_report.WeatherReport
+import kotlinx.coroutines.launch
 
 val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "WeatherReportCompose")
 
@@ -39,6 +41,7 @@ object Destinations {
 fun weatherNavigation (
     navController: NavHostController = rememberNavController(),
 ) {
+    val scope = rememberCoroutineScope()
     var titleText by remember { mutableStateOf("") }
 
     Scaffold (
@@ -54,7 +57,6 @@ fun weatherNavigation (
             modifier = Modifier.padding(it)
         ) {
             composable(Destinations.TITLE) {
-                titleText = ""
                 TitleScene(
                     onTitleClick = {
                         navController.navigate(Destinations.CITYSELECT)
@@ -65,6 +67,10 @@ fun weatherNavigation (
                 CityName(
                     onCityselect = {
                         navController.navigate(Destinations.WEATHERREPORT)
+//                        scope.launch {
+//                           titleText =
+//                               CityGroup.getWeather("2130037").toString()
+//                        }
                     }
                 )
             }

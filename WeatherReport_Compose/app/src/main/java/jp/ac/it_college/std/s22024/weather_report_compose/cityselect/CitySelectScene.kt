@@ -11,6 +11,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -20,15 +21,17 @@ import jp.ac.it_college.std.s22024.weather_report_compose.ui.theme.WeatherReport
 
 @Composable
 fun CityName(modifier: Modifier = Modifier, onCityselect: (String) -> Unit = {}) {
+    val scope = rememberCoroutineScope()
     Surface(modifier) {
         Column(
             modifier = Modifier
                 .verticalScroll(rememberScrollState())
                 .fillMaxSize()
         ) {
+            Text(text = "")
             citylist.forEach{ CityData ->
                 Button(
-                    onClick = { onCityselect(CityData.name) },
+                    onClick = { onCityselect(CityData.cityid) },
                     modifier = Modifier
                         .padding(4.dp)
                 ) {
