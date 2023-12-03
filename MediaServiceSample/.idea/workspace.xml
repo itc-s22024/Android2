@@ -10,50 +10,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de838bda-b7bf-4105-a137-9cd9eda3d0cc" name="変更" comment="">
-      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/jp/ac/it_college/std/s22024/media3servicesample/ExampleInstrumentedTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/jp/ac/it_college/std/s22024/media3servicesample/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/jp/ac/it_college/std/s22024/media3servicesample/MediaPlaybackService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/semi.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/jp/ac/it_college/std/s22024/media3servicesample/ExampleUnitTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Service_Sample/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Service_Sample/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Service_Sample/app/src/main/java/jp/ac/it_college/std/s22024/servicesample/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Service_Sample/app/src/main/java/jp/ac/it_college/std/s22024/servicesample/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Service_Sample/app/src/main/java/jp/ac/it_college/std/s22024/servicesample/SoundManageService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Service_Sample/app/src/main/java/jp/ac/it_college/std/s22024/servicesample/SoundManageService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ComposeSample/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/androidTest/java/jp/ac/it_college/std/s22024/pokeapp/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/PokeNavigation.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/api/Client.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/api/GamesGroup.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/api/PokemonGroup.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/api/model/Generation.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/api/model/Pokemon.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/api/model/PokemonSpecies.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/api/model/PokemonSpeciesVariety.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/api/model/PokemonSprites.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/api/model/common.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/dao/PokeDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/database/PokeRoomDatabase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/database/entity/Poke.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/generation/SelectGeneration.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/model/PokeQuiz.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/quiz/QuizScene.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/result/ResultScene.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/title/TitleScene.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/ui/theme/Color.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/ui/theme/Theme.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/java/jp/ac/it_college/std/s22024/pokeapp/ui/theme/Type.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/drawable/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/drawable/mark_batsu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/drawable/mark_maru.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/mipmap-anydpi/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/mipmap-anydpi/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/app/src/test/java/jp/ac/it_college/std/s22024/pokeapp/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Poke_App/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComposeSample/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ComposeSample/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComposeSample/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ComposeSample/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ComposeSample/app/src/main/java/jp/ac/it_college/std/s22024/compose_sample/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../ComposeSample/app/src/main/java/jp/ac/it_college/std/s22024/compose_sample/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/s22024/.android/avd/Pixel_6_API_33.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/s22024/.android/avd/Copy_of_Pixel_6_API_34.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -67,19 +88,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/home/s22024/AndroidStudioProjects/Android2/MediaServiceSample/app/src/main/res/raw",
-    "memory.settings.postsync.last.time.stamp": "1697503313112",
-    "project.structure.last.edited": "Dependencies",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/s22024/AndroidStudioProjects/Android2/MediaServiceSample/app/src/main/res/raw&quot;,
+    &quot;memory.settings.postsync.last.time.stamp&quot;: &quot;1697503313112&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/raw" />
